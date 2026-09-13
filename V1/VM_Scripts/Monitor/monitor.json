@@ -1,0 +1,58 @@
+{
+  "Settings": {
+    "IntervalSeconds": 10,
+    "FailThreshold": 3,
+    "OkThreshold": 2,
+    "LogFile": "monitor.log",
+    "DefaultFailoverAlias": "Backbone_two",
+    "DefaultFailbackAlias": "Backbone_one",
+    "InterfaceAliases": {
+      "Router_A_Stadt": {
+        "Failover": "Backbone_two",
+        "Failback": "Backbone_one"
+      },
+      "Router_B_Stadt": {
+        "Failover": "Backbone_two",
+        "Failback": "Backbone_one"
+      },
+      "Router_C_Stadt": {
+        "Failover": "Backbone_two",
+        "Failback": "Backbone_one"
+      },
+      "Router_D_Stadt": {
+        "Failover": "Backbone_two",
+        "Failback": "Backbone_one"
+      }
+    }
+  },
+  "Routers": [
+    {
+      "Name": "Router_A_Stadt",
+      "Network": "192.168.10.0/24",
+      "PrimaryIP": "192.168.100.1",
+      "BackupIP": "192.168.200.1",
+      "Neighbors": [ "Router_B_Stadt", "Router_C_Stadt", "Router_D_Stadt" ]
+    },
+    {
+      "Name": "Router_B_Stadt",
+      "Network": "192.168.20.0/24",
+      "PrimaryIP": "192.168.100.2",
+      "BackupIP": "192.168.200.2",
+      "Neighbors": [ "Router_A_Stadt", "Router_C_Stadt", "Router_D_Stadt" ]
+    },
+    {
+      "Name": "Router_C_Stadt",
+      "Network": "192.168.30.0/24",
+      "PrimaryIP": "192.168.100.3",
+      "BackupIP": "192.168.200.3",
+      "Neighbors": [ "Router_A_Stadt", "Router_B_Stadt", "Router_D_Stadt" ]
+    },
+    {
+      "Name": "Router_D_Stadt",
+      "Network": "192.168.40.0/24",
+      "PrimaryIP": "192.168.100.4",
+      "BackupIP": "192.168.200.4",
+      "Neighbors": [ "Router_A_Stadt", "Router_B_Stadt", "Router_C_Stadt" ]
+    }
+  ]
+}

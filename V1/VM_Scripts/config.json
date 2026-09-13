@@ -1,0 +1,103 @@
+{
+  "GlobalSettings": {
+    "RouterMasterPath": "D:\\SysPrep\\WS-2022-07-26-sysprep.vhdx",
+    "ClientMasterPath": "D:\\SysPrep\\Win11-SysPrep.vhdx",
+    "VmBasePath": "D:\\HyperV",
+    "Switches": [
+      { "Name": "A-Stadt", "Type": "Private" },
+      { "Name": "B-Stadt", "Type": "Private" },
+      { "Name": "C-Stadt", "Type": "Private" },
+      { "Name": "D-Stadt", "Type": "Private" },
+      { "Name": "Backbone_one", "Type": "Private" },
+      { "Name": "Backbone_two", "Type": "Private" }
+    ],
+    "BackboneSwitches": [
+      "Backbone_one",
+      "Backbone_two"
+    ]
+  },
+  "Routers": [
+    {
+      "Name": "Router_A_Stadt",
+      "NewPCName": "Router-A-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 2,
+      "StadtSwitch": "A-Stadt",
+      "VhdPath": "D:\\HyperV\\Router_A_Stadt_HDD1.vhdx"
+    },
+    {
+      "Name": "Router_B_Stadt",
+      "NewPCName": "Router-B-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 2,
+      "StadtSwitch": "B-Stadt",
+      "VhdPath": "D:\\HyperV\\Router_B_Stadt_HDD1.vhdx"
+    },
+    {
+      "Name": "Router_C_Stadt",
+      "NewPCName": "Router-C-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 2,
+      "StadtSwitch": "C-Stadt",
+      "VhdPath": "D:\\HyperV\\Router_C_Stadt_HDD1.vhdx"
+    },
+    {
+      "Name": "Router_D_Stadt",
+      "NewPCName": "Router-D-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 2,
+      "StadtSwitch": "D-Stadt",
+      "VhdPath": "D:\\HyperV\\Router_D_Stadt_HDD1.vhdx"
+    }
+  ],
+  "Clients": [
+    {
+      "Name": "CL_A_Stadt",
+      "NewPCName": "CL-A-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 1,
+      "Switch": "A-Stadt",
+      "VhdPath": "D:\\HyperV\\CL_A_Stadt_HDD1.vhdx"
+    },
+    {
+      "Name": "CL_B_Stadt",
+      "NewPCName": "CL-B-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 1,
+      "Switch": "B-Stadt",
+      "VhdPath": "D:\\HyperV\\CL_B_Stadt_HDD1.vhdx"
+    },
+    {
+      "Name": "CL_C_Stadt",
+      "NewPCName": "CL-C-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 1,
+      "Switch": "C-Stadt",
+      "VhdPath": "D:\\HyperV\\CL_C_Stadt_HDD1.vhdx"
+    },
+    {
+      "Name": "CL_D_Stadt",
+      "NewPCName": "CL-D-Stadt",
+      "MemoryStartMB": 1024,
+      "MemoryMinMB": 512,
+      "MemoryMaxMB": 1024,
+      "CpuCount": 1,
+      "Switch": "D-Stadt",
+      "VhdPath": "D:\\HyperV\\CL_D_Stadt_HDD1.vhdx"
+    }
+  ]
+}
